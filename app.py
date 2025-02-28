@@ -13,7 +13,7 @@ load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_AI_API_KEY"))
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 # Function to create a DB connection
 def get_db_connection():
