@@ -12,10 +12,6 @@ CORS(app)
 
 load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_AI_API_KEY"))
-print(os.getenv("GOOGLE_AI_API_KEY"))
-
-print(genai.list_models())
-
 
 # Function to create a DB connection
 def get_db_connection():
